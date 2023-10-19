@@ -16,6 +16,8 @@ JobConnect+ is a powerful job search tool that seamlessly combines web scraping 
 5. Access the app in your web browser at the provided URL.
 6. Enter your interested company's name, and JobConnect+ will scrape the relevant information and craft a personalized message for you to send to the HR department.
 
+## Explore some data
+![](./images/table.png)
 ## Technologies Used
 - Python
 - Streamlit
