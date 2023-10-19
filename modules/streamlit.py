@@ -10,8 +10,9 @@ from io import StringIO
 
 
 
-def streamlit(df, conn):
+def streamlit(df):
     st.title('JobConnect+')
+    st.header("Your Gateway to New Opportunities")
     info_columns = ['Name','Overall','Culture','Diversity','Conciliation','Managers','Salaries','Opportunitys','FriendRecomendation','CEO','Outlook']
 
     tab1, tab2, tab3 = st.tabs(["General Information", "Companies Comparison", "Job"])

@@ -1,15 +1,12 @@
-import duckdb
+import pandas as pd
 
 def connect():
     # Create the connection to the database and all the information in a single dataframe
-    duckdb.sql('INSTALL sqlite; LOAD sqlite;')
-    conn = duckdb.connect("./data/Companies.db")
-    df = conn.execute('SELECT * FROM companies c;').fetch_df()
+    df = pd.read_csv('./data/companies_info.csv')
     df = df.replace(to_replace="%C3%A9", value='e', regex=True)
     df = df.replace(to_replace="%C3%B3", value='o', regex=True)
     df = df.replace(to_replace="%C3%A1", value='a', regex=True)
-    
-    return df, conn
+    return df
 
 def create_companie(values, connection):
     # Create a cursor object to execute SQL statements
